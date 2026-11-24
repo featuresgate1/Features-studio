@@ -408,6 +408,11 @@
     .story-geometry{height:clamp(212px,75svh,275px)}
   }
 
+
+  /* V9: visible keyboard focus and stable navigation during keyboard use. */
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+  .contact a:focus-visible,.contact button:focus-visible,.contact input:focus-visible,.contact textarea:focus-visible{outline-color:var(--paper)}
+  .site-nav:focus-within{transform:none!important;opacity:1!important;visibility:visible!important}
 </style>
 </head>
 <body>
@@ -418,7 +423,7 @@
       <span class="brand-word">features.<small>studio</small></span>
     </a>
     <nav class="nav-links" id="navlinks" aria-label="Main navigation">
-      <a href="#philosophy">Our thinking</a><a href="work.html">Portfolio</a><a href="#method">Method</a><a href="#services">Services</a><a href="#studio">Studio</a><a class="nav-cta" href="#contact">Start a project ↗</a>
+      <a href="#philosophy">Why Features</a><a href="work.html">Work</a><a href="#method">Method</a><a href="#services">Services</a><a href="#studio">Studio</a><a class="nav-cta" href="#contact">Start a project ↗</a>
     </nav>
     <button class="menu-button" id="menubtn" aria-label="Open navigation" aria-controls="navlinks" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h18M3 16h18"/></svg></button>
   </header>
@@ -430,7 +435,7 @@
             <div class="hero-kicker">Independent brand & creative studio</div>
             <h1 id="hero-heading"><span class="line">Every brand</span><span class="line">has <span class="blue">features.</span></span><span class="line">We make yours</span><span class="line">recognisable.</span></h1>
             <p class="hero-desc">Brand strategy, identity and creative expression for ambitious businesses.</p>
-            <div class="hero-actions"><a class="pill solid" href="#work">Explore our world <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a class="pill outline" href="#contact">Start a project</a></div>
+            <div class="hero-actions"><a class="pill solid" href="#work">View selected work <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a class="pill outline" href="#contact">Start a project</a></div>
           </div>
           <div class="hero-art hero-fusion" role="img" aria-label="Three different coloured, initially blurred circles move together as you scroll and become one crisp, subtly shining circle — a recognisable identity.">
             <div class="fusion-field" id="fusion-field" aria-hidden="true">
@@ -636,10 +641,10 @@
       </div>
     </div></section>
     <section class="manifesto" id="studio" aria-labelledby="manifesto-title"><div class="wrap reveal"><div class="overline">Our manifesto</div><h2 id="manifesto-title">We don't create difference for the sake of being different. <em>We reveal what deserves to be known.</em></h2><div class="manifesto-foot"><strong>Features Studio. Distinctly Yours.</strong><span>Smart. Curious. Crafted. Confident.</span></div></div></section>
-    <section class="thinking" aria-labelledby="thinking-title"><div class="wrap"><div class="section-header reveal"><div><div class="section-index"><span class="index-number">04 /</span> How we think</div><h2 id="thinking-title">A clearer<br/>perspective.</h2></div><p>A few principles that shape the way we see brands, make decisions and create.</p></div><div class="thinking-grid"><div class="thought reveal"><span class="thought-num">01 — DISCOVERY</span><h3>Before we create,<br/>we find.</h3><p>Every brand has a truth worth uncovering. Better questions lead to more meaningful creative decisions.</p></div><div class="thought reveal"><span class="thought-num">02 — IDENTITY</span><h3>Difference needs<br/>a form.</h3><p>The strongest identities don't just look different. They make an authentic difference easy to see.</p></div><div class="thought reveal"><span class="thought-num">03 — EXPRESSION</span><h3>Consistency<br/>creates memory.</h3><p>A brand becomes recognisable through distinctive assets and meaningful repetition.</p></div></div></div></section>
+    <section class="thinking" id="insights" aria-labelledby="thinking-title"><div class="wrap"><div class="section-header reveal"><div><div class="section-index"><span class="index-number">04 /</span> How we think</div><h2 id="thinking-title">A clearer<br/>perspective.</h2></div><p>A few principles that shape the way we see brands, make decisions and create.</p></div><div class="thinking-grid"><div class="thought reveal"><span class="thought-num">01 — DISCOVERY</span><h3>Before we create,<br/>we find.</h3><p>Every brand has a truth worth uncovering. Better questions lead to more meaningful creative decisions.</p></div><div class="thought reveal"><span class="thought-num">02 — IDENTITY</span><h3>Difference needs<br/>a form.</h3><p>The strongest identities don't just look different. They make an authentic difference easy to see.</p></div><div class="thought reveal"><span class="thought-num">03 — EXPRESSION</span><h3>Consistency<br/>creates memory.</h3><p>A brand becomes recognisable through distinctive assets and meaningful repetition.</p></div></div></div></section>
     <section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap"><div class="contact-content"><div class="reveal"><div class="overline" style="color:#9ba9bd">Your next chapter</div><h2 id="contact-title">Let's make<br/>yours <span>recognisable.</span></h2><p>Tell us what you're building—and what you want your brand to become known for.</p></div>
-      <form class="project-form reveal" id="projectform"><div class="overline" style="color:#b9c7dc">Start a conversation</div><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="How should we call you?" autocomplete="name" required maxlength="100"/><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required maxlength="200"/><label for="brand">Brand or company</label><input id="brand" name="brand" type="text" placeholder="What are you building?" maxlength="120"/><label for="ambition">What do you want to become known for?</label><textarea id="ambition" name="ambition" placeholder="Tell us about your ambition..." required maxlength="2000"></textarea><button type="submit" class="pill">Prepare enquiry ↗</button><p class="form-note">Prototype mode: the form does not transmit data. The final website will connect to your chosen business email or CRM.</p><p class="form-feedback" id="formfeedback" aria-live="polite"></p></form>
-    </div><footer class="footer"><a href="#top" aria-label="Back to top"><strong>features.</strong></a><span>Every brand has features. We make yours recognisable.</span><div class="footer-links"><a href="#top">Back to top ↑</a><a href="#services">Services</a><a href="#method">Method</a></div><span>© <span id="year"></span> Features Studio</span></footer>
+      <form class="project-form reveal" id="projectform"><div class="overline" style="color:#b9c7dc">Start a conversation</div><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="How should we call you?" autocomplete="name" required maxlength="100"/><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required maxlength="200"/><label for="brand">Brand or company</label><input id="brand" name="brand" type="text" placeholder="What are you building?" maxlength="120"/><label for="ambition">What do you want to become known for?</label><textarea id="ambition" name="ambition" placeholder="Tell us about your ambition..." required maxlength="2000"></textarea><button type="submit" class="pill">Copy enquiry ↗</button><p class="form-note">Preview only: this copies your enquiry to your clipboard. It does not send a message.</p><p class="form-feedback" id="formfeedback" aria-live="polite"></p></form>
+    </div><footer class="footer"><a href="#top" aria-label="Back to top"><strong>features.</strong></a><span>Every brand has features. We make yours recognisable.</span><div class="footer-links"><a href="#top">Back to top ↑</a><a href="#services">Services</a><a href="#method">Method</a><a href="#insights">Insights</a></div><span>© <span id="year"></span> Features Studio</span></footer>
     </div></section>
   </main>
   <script>
@@ -668,8 +673,8 @@
     if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');obs.unobserve(entry.target)}})},{threshold:.10,rootMargin:'0px 0px -25px 0px'});targets.forEach(t=>obs.observe(t))}else{targets.forEach(t=>t.classList.add('is-visible'))}
     const form=document.getElementById('projectform'),feedback=document.getElementById('formfeedback');
     form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;const data=new FormData(form);const message=`FEATURES STUDIO — PROJECT ENQUIRY\n\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nBrand: ${data.get('brand')||'Not specified'}\n\nWhat we want to become known for:\n${data.get('ambition')}`;
-      try{await navigator.clipboard.writeText(message);feedback.textContent='Enquiry copied to your clipboard. Nothing has been sent; connect a business inbox before launch.'}
-      catch{feedback.textContent='Preview only — nothing has been sent. Your details remain on this page.'}
+      try{await navigator.clipboard.writeText(message);feedback.textContent='Enquiry copied. No message has been sent.'}
+      catch{feedback.textContent='Could not copy the enquiry. Nothing has been sent; your details remain on this page.'}
     });
   })();
   </script>
