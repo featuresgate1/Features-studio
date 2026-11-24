@@ -119,11 +119,8 @@
     // Curve provides a gentle crossfade into/out of each scroll chapter.
     function smoothstep(a,b,x){const t=clamp((x-a)/(b-a));return t*t*(3-2*t)}
     function chapterOpacity(p,i){const first=smoothstep(.28,.38,p),second=smoothstep(.62,.72,p);return i===0?1-first:i===1?first*(1-second):second}
-    function recognitionProgress(){
-      if(!recognition)return 0;
-      const r=recognition.getBoundingClientRect();
-      return clamp(-r.top/Math.max(1,r.height-innerHeight));
-    }
+    function stickyProgress(el,sticky){if(!el||!sticky)return 0;const r=el.getBoundingClientRect();const offset=parseFloat(getComputedStyle(sticky).top)||0;return clamp((offset-r.top)/Math.max(1,r.height-sticky.clientHeight));}
+    function recognitionProgress(){return stickyProgress(recognition,recognition?.querySelector('.idea-sticky'));}
     function renderRecognition(p){
       if(!recognition)return;
       const stage=Math.min(3,Math.floor(Math.min(.99999,p)*4));
@@ -185,8 +182,10 @@
       if(!recognition)return;
       if(!motionAllowed()){renderRecognition([0,.35,.62,.98][stage]);return}
       const r=recognition.getBoundingClientRect();
-      const top=window.scrollY+r.top;
-      const available=Math.max(1,r.height-innerHeight);
+      const sticky=recognition.querySelector('.idea-sticky');
+      const offset=parseFloat(getComputedStyle(sticky).top)||0;
+      const top=window.scrollY+r.top-offset;
+      const available=Math.max(1,r.height-sticky.clientHeight);
       const targets=[.015,.38,.64,.95];
       // Synchronize navigation with the true scroll position so the story reverses naturally.
       window.scrollTo({top:top+available*targets[stage],behavior:'smooth'});
@@ -208,7 +207,7 @@
       if(recognition){const rr=recognition.getBoundingClientRect();if(rr.bottom>0 && rr.top<innerHeight){renderRecognition(recognitionProgress())}}
       if(hero){const r=hero.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const stickyTop=parseFloat(getComputedStyle(heroFrame).top)||0;const p=clamp((stickyTop-r.top)/Math.max(1,r.height-(heroFrame?.clientHeight||innerHeight)));renderFusion(p)}}
       if(ticker&&track){const r=ticker.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const p=progress(ticker);track.style.setProperty('--ticker-offset',`${(-p*250).toFixed(1)}px`)}}
-      if(story){const r=story.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const available=Math.max(1,r.height-innerHeight);const p=clamp(-r.top/available);
+      if(story){const r=story.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const p=stickyProgress(story,story.querySelector('.story-sticky'));
           bar.style.transform=`scaleX(${p})`;
           const next=p<1/3?0:p<2/3?1:2;
           if(next!==lastStep){stepText.textContent=String(next+1).padStart(2,'0');panels.forEach((panel,i)=>{panel.classList.toggle('is-current',i===next);panel.setAttribute('aria-hidden',String(i!==next))});lastStep=next}
