@@ -1,0 +1,146 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Selected Work — Features Studio</title><meta name="description" content="Explore brand identities and social creative published by Features Studio."/><style>
+:root{--ink:#111827;--paper:#F7F4ED;--blue:#2563EB;--line:#11182725;--sub:#606a7a;--gutter:clamp(22px,5vw,96px)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.wrap{width:100%;max-width:1700px;padding-inline:var(--gutter);margin:auto}
+.top{height:77px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;padding-inline:var(--gutter);position:sticky;top:0;z-index:20;background:#f7f4edeb;backdrop-filter:blur(16px)}.brand{font-weight:800;font-size:22px;letter-spacing:-.075em}.brand em{font-size:9px;font-style:normal;display:block;letter-spacing:.32em;font-weight:600;text-transform:uppercase}.top nav{display:flex;gap:27px;align-items:center}.top nav a{font-size:12px;font-weight:650}.top nav a:hover{color:var(--blue)}.top nav a:last-child{border:1px solid var(--ink);border-radius:35px;padding:12px 18px}.top nav a:last-child:hover{background:var(--ink);color:white}
+.hero{padding:clamp(88px,12vw,175px) 0 86px}.overline{font-size:11px;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:var(--blue);margin-bottom:31px}.hero h1{margin:0;font-size:clamp(70px,13.8vw,210px);font-weight:675;letter-spacing:-.09em;line-height:.91}.hero h1 span{color:var(--blue)}.hero-bottom{margin-top:45px;display:flex;align-items:end;justify-content:space-between;gap:24px;max-width:1150px}.hero-bottom p{font-size:clamp(16px,1.5vw,22px);line-height:1.55;max-width:550px;margin:0;color:var(--sub)}.hero-bottom small{font-size:11px;text-transform:uppercase;color:#737c8d;letter-spacing:.07em;white-space:nowrap}
+.tools{display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin:0 0 40px}.tools .eyebrow{font-size:10px;font-weight:750;letter-spacing:.14em;color:#697385;text-transform:uppercase}.tabs{display:flex;flex-wrap:wrap;gap:7px}.tab{border:1px solid #adb4bf;background:transparent;border-radius:35px;padding:10px 18px;font-size:12px;font-weight:700;color:#434c5a;transition:.2s}.tab[aria-pressed=true],.tab:hover{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px;padding-bottom:100px}.portfolio-card{min-width:0}.project-hit{display:block}.feature-thumb{position:relative;overflow:hidden;aspect-ratio:1.24;background:var(--project-bg);border-radius:13px}.feature-thumb img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s cubic-bezier(.19,1,.22,1)}.project-hit:hover img{transform:scale(1.07)}.project-number,.project-open{position:absolute;z-index:2;color:#fff;text-shadow:0 1px 10px #0008;top:17px}.project-number{left:18px;font-size:9px;font-weight:800;letter-spacing:.17em}.project-open{right:17px;font-size:22px}.project-info{display:flex;justify-content:space-between;gap:14px;padding:19px 2px 0}.project-info h3{font-size:clamp(19px,2.2vw,28px);letter-spacing:-.065em;line-height:1.12;font-weight:660;margin:0}.project-info p{color:#77808c;font-size:12px;margin:8px 0 0}.project-link-icon{font-size:22px;color:var(--blue)}.portfolio-card[hidden]{display:none!important}
+.image-fallback{display:none;position:absolute;inset:0;background:#111827d9;color:white;padding:25px;align-items:center;justify-content:center;font-size:13px;line-height:1.5;text-align:center;font-weight:650}.asset-unavailable .image-fallback{display:flex}
+.foot{background:var(--ink);color:var(--paper);padding:75px var(--gutter) 35px}.foot .foot-top{display:flex;justify-content:space-between;align-items:start;gap:40px;margin-bottom:95px}.foot h2{margin:0;max-width:800px;line-height:1.06;letter-spacing:-.08em;font-size:clamp(48px,6vw,95px);font-weight:650}.foot p{font-size:12px;color:#a7b5ca;line-height:1.85;max-width:440px}.foot-bottom{display:flex;justify-content:space-between;gap:18px;border-top:1px solid #ffffff33;padding-top:25px;color:#c8cdd4;font-size:11px;flex-wrap:wrap}.foot a:hover{color:#86a8ff}.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}.reveal.is-visible{opacity:1;transform:none}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:clamp(65px,14vw,150px)}}
+@media(max-width:650px){.top{height:68px}.top nav{gap:12px}.top nav a{font-size:10px}.top nav a:last-child{display:none}.brand{font-size:20px}.hero{padding-top:85px;padding-bottom:50px}.hero h1{font-size:clamp(59px,15vw,105px)}.hero-bottom{align-items:start;flex-direction:column}.tools{align-items:start;flex-direction:column}.grid{grid-template-columns:1fr;gap:32px;padding-bottom:80px}.foot .foot-top{display:block}.foot .foot-top p{margin-top:30px}.foot h2{font-size:50px}.hero-bottom small{white-space:normal}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+
+.scroll-meter{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--blue);z-index:40;transform-origin:left;transform:scaleX(0);pointer-events:none}
+.top{transition:transform .4s cubic-bezier(.2,.8,.2,1)}.top.nav-hidden:not(:focus-within){transform:translateY(-105%)}
+.hero h1{transform:translate3d(0,var(--work-hero-y,0px),0);opacity:var(--work-hero-alpha,1)}
+.feature-thumb img{will-change:transform;transform:translate3d(0,var(--project-shift,0px),0) scale(1.13)}
+.project-hit:hover .feature-thumb img{transform:translate3d(0,var(--project-shift,0px),0) scale(1.19)}
+.up-indicator{position:fixed;z-index:30;bottom:24px;right:24px;width:44px;height:44px;border:1px solid #cfd2dc;background:#f7f4edef;border-radius:50%;display:grid;place-items:center;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s,transform .3s}
+.up-indicator.is-visible{opacity:1;transform:none;pointer-events:auto}.up-indicator svg{width:17px;height:17px}
+@media(prefers-reduced-motion:reduce){.top{transition:none!important}.hero h1,.feature-thumb img{transform:none!important;opacity:1!important}.up-indicator{display:none}}
+</style></head><body>
+<header class="top"><a href="index.html" class="brand" aria-label="Features Studio homepage">features.<em>Studio</em></a><nav aria-label="Site navigation"><a href="index.html">Home</a><a href="index.html#method">Method</a><a href="index.html#services">Services</a><a href="index.html#contact">Start a project ↗</a></nav></header>
+<main><section class="hero"><div class="wrap"><div class="overline">Features Studio / Published archive</div><h1>Selected<br/><span>work.</span></h1><div class="hero-bottom"><p>A selection of identity systems and creative expressions published by Features Studio. Each project has its own distinctive features.</p><small>10 projects · From the Behance archive</small></div></div></section>
+<section class="library wrap" aria-label="Project library"><div class="tools"><div class="eyebrow" id="projectcount" aria-live="polite">Showing all 10 projects</div><div class="tabs" role="group" aria-label="Filter projects"><button class="tab" data-filter="all" aria-pressed="true">All work</button><button class="tab" data-filter="identity" aria-pressed="false">Brand identity</button><button class="tab" data-filter="social" aria-pressed="false">Social & campaigns</button></div></div><div class="grid" id="gallery"><article class="portfolio-card reveal" data-category="identity">
+      <a class="project-hit" href="https://www.behance.net/gallery/120995797/ARX-Branding-Identity" target="_blank" rel="noopener noreferrer" aria-label="View ARX Branding Identity on Behance">
+        <div class="feature-thumb" style="--project-bg:#292746">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/c67001120995797.Y3JvcCwxNDk3LDExNzEsMTI5LDYz.jpg" loading="lazy" decoding="async" alt="ARX Branding Identity — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 01</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>ARX Branding Identity</h3><p>Brand identity</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="identity">
+      <a class="project-hit" href="https://www.behance.net/gallery/129568701/Vivienda-Brand-Identity" target="_blank" rel="noopener noreferrer" aria-label="View Vivienda Brand Identity on Behance">
+        <div class="feature-thumb" style="--project-bg:#d9e1da">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/4086a8129568701.Y3JvcCw1MjcwLDQxMjIsMzY1LDMzOQ.jpg" loading="lazy" decoding="async" alt="Vivienda Brand Identity — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 02</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>Vivienda Brand Identity</h3><p>Brand identity</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="identity">
+      <a class="project-hit" href="https://www.behance.net/gallery/110511777/Enwan-Corporate-Identity" target="_blank" rel="noopener noreferrer" aria-label="View Enwan Corporate Identity on Behance">
+        <div class="feature-thumb" style="--project-bg:#282e48">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7f66b2110511777.Y3JvcCw3NzksNjA5LDIxMCw5Mg.jpg" loading="lazy" decoding="async" alt="Enwan Corporate Identity — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 03</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>Enwan Corporate Identity</h3><p>Corporate identity</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="identity">
+      <a class="project-hit" href="https://www.behance.net/gallery/117815767/Al-Moasher-Corporate-Identity" target="_blank" rel="noopener noreferrer" aria-label="View Al-Moasher Corporate Identity on Behance">
+        <div class="feature-thumb" style="--project-bg:#142d45">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/595248117815767.Y3JvcCwyODEyLDIyMDAsMjQzLDA.jpg" loading="lazy" decoding="async" alt="Al-Moasher Corporate Identity — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 04</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>Al-Moasher Corporate Identity</h3><p>Corporate identity</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="identity">
+      <a class="project-hit" href="https://www.behance.net/gallery/94002311/Jeeran-Corporate-Identity" target="_blank" rel="noopener noreferrer" aria-label="View Jeeran Corporate Identity on Behance">
+        <div class="feature-thumb" style="--project-bg:#302e3e">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/f04c2e94002311.Y3JvcCwyMTU0LDE2ODQsOTQ5LDMwOQ.jpg" loading="lazy" decoding="async" alt="Jeeran Corporate Identity — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 05</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>Jeeran Corporate Identity</h3><p>Corporate identity</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="identity">
+      <a class="project-hit" href="https://www.behance.net/gallery/124316117/MAG-Corporate-Identity" target="_blank" rel="noopener noreferrer" aria-label="View MAG Corporate Identity on Behance">
+        <div class="feature-thumb" style="--project-bg:#c7d7ea">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7d7a90124316117.Y3JvcCwyODgxLDIyNTMsMTM1LDQ5.jpg" loading="lazy" decoding="async" alt="MAG Corporate Identity — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 06</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>MAG Corporate Identity</h3><p>Corporate identity</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="social">
+      <a class="project-hit" href="https://www.behance.net/gallery/103550715/Real-estate-Social-Media" target="_blank" rel="noopener noreferrer" aria-label="View Real Estate Social Media — 01 on Behance">
+        <div class="feature-thumb" style="--project-bg:#245b99">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7e8c15103550715.Y3JvcCwxMzExLDEwMjYsNDUsMA.jpg" loading="lazy" decoding="async" alt="Real Estate Social Media — 01 — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 07</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>Real Estate Social Media — 01</h3><p>Social media design</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="social">
+      <a class="project-hit" href="https://www.behance.net/gallery/104993721/Social-Media-Real-Estate" target="_blank" rel="noopener noreferrer" aria-label="View Real Estate Social Media — 02 on Behance">
+        <div class="feature-thumb" style="--project-bg:#e6a400">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b601c0104993721.Y3JvcCwxMzExLDEwMjYsNDUsMA.jpg" loading="lazy" decoding="async" alt="Real Estate Social Media — 02 — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 08</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>Real Estate Social Media — 02</h3><p>Social media design</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="social">
+      <a class="project-hit" href="https://www.behance.net/gallery/108041721/Real-Estate-Social-Media" target="_blank" rel="noopener noreferrer" aria-label="View Real Estate Social Media — 03 on Behance">
+        <div class="feature-thumb" style="--project-bg:#167d90">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e69bd1108041721.Y3JvcCwxMzExLDEwMjYsNDUsMA.jpg" loading="lazy" decoding="async" alt="Real Estate Social Media — 03 — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 09</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>Real Estate Social Media — 03</h3><p>Social media design</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article>
+<article class="portfolio-card reveal" data-category="social">
+      <a class="project-hit" href="https://www.behance.net/gallery/111363405/Real-Estate-Social-Media" target="_blank" rel="noopener noreferrer" aria-label="View Real Estate Social Media — 04 on Behance">
+        <div class="feature-thumb" style="--project-bg:#814b8e">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e04fbb111363405.Y3JvcCwxMzExLDEwMjYsNDUsMA.jpg" loading="lazy" decoding="async" alt="Real Estate Social Media — 04 — published Features Studio project cover" referrerpolicy="no-referrer" onerror="this.closest('.feature-thumb').classList.add('asset-unavailable')"/>
+          <span class="project-number">FEATURES / 10</span>
+          <span class="project-open" aria-hidden="true">↗</span>
+          <span class="image-fallback">Artwork preview unavailable. Open published project ↗</span>
+        </div>
+        <div class="project-info"><div><h3>Real Estate Social Media — 04</h3><p>Social media design</p></div><span class="project-link-icon" aria-hidden="true">↗</span></div>
+      </a>
+    </article></div></section></main>
+<footer class="foot"><div class="foot-top"><h2>Ready to make<br/>your mark?</h2><div><a href="index.html#contact" style="display:inline-block;background:#F7F4ED;color:#111827;padding:16px 24px;border-radius:50px;font-weight:700;font-size:13px">Start a project ↗</a><p>Published portfolio imagery and project titles are linked to their original Features Studio Behance listings. These are archival works and have not been verified against any current Facebook feed. Full-resolution files and client approvals should be used before public launch.</p></div></div><div class="foot-bottom"><span>© <span id="year"></span> Features Studio · Distinctly Yours.</span><span><a href="https://www.behance.net/FeaturesStudio1" target="_blank" rel="noopener noreferrer">Original portfolio ↗</a> · <a href="https://www.facebook.com/featuresstudio1" target="_blank" rel="noopener noreferrer">Facebook ↗</a></span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();const cards=[...document.querySelectorAll('.portfolio-card')],tabs=[...document.querySelectorAll('.tab')],count=document.getElementById('projectcount');tabs.forEach(tab=>tab.addEventListener('click',()=>{const filter=tab.dataset.filter;tabs.forEach(t=>t.setAttribute('aria-pressed',String(t===tab)));let n=0;cards.forEach(c=>{const show=filter==='all'||c.dataset.category===filter;c.hidden=!show;if(show)n++});count.textContent=`Showing ${n} ${n===1?'project':'projects'}`}));if('IntersectionObserver'in window){const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');obs.unobserve(e.target)}}),{threshold:0.08});document.querySelectorAll('.reveal').forEach(e=>obs.observe(e))}else document.querySelectorAll('.reveal').forEach(e=>e.classList.add('is-visible'));</script>
+<script>(function(){'use strict';
+const clamp=(n,a=0,b=1)=>Math.max(a,Math.min(b,n));const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+const meter=document.createElement('div');meter.className='scroll-meter';meter.setAttribute('aria-hidden','true');document.body.append(meter);
+const top=document.querySelector('.top'),hero=document.querySelector('.hero h1'),up=document.createElement('a');up.className='up-indicator';up.href='#';up.setAttribute('aria-label','Back to top');up.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';document.body.append(up);
+let last=scrollY,raf=0;function update(){raf=0;const y=scrollY;meter.style.transform=`scaleX(${clamp(y/Math.max(1,document.documentElement.scrollHeight-innerHeight))})`;up.classList.toggle('is-visible',y>innerHeight);
+const dy=y-last;if(y>145&&Math.abs(dy)>4){top.classList.toggle('nav-hidden',dy>0)}if(y<=145||reduced.matches)top.classList.remove('nav-hidden');last=y;if(reduced.matches)return;
+const h=document.querySelector('.hero').getBoundingClientRect();if(h.bottom>0){const p=clamp(-h.top/h.height);hero.style.setProperty('--work-hero-y',`${(-50*p).toFixed(1)}px`);hero.style.setProperty('--work-hero-alpha',(1-.65*p).toFixed(2))}
+document.querySelectorAll('.portfolio-card:not([hidden]) .feature-thumb img').forEach(im=>{const r=im.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const p=clamp((innerHeight-r.top)/(innerHeight+r.height));im.style.setProperty('--project-shift',`${((p-.5)*34).toFixed(1)}px`)}});
+}const req=()=>{if(!raf)raf=requestAnimationFrame(update)};addEventListener('scroll',req,{passive:true});addEventListener('resize',req,{passive:true});reduced.addEventListener?.('change',req);document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',req));up.addEventListener('click',()=>top.classList.remove('nav-hidden'));req();})();</script>
+</body></html>
