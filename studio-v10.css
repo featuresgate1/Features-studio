@@ -501,3 +501,15 @@ body:not(.home-page) .thinking{min-height:calc(100svh - 76px)}
 .portal-link strong{font-size:17px}.portal-link small{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.portal-link,.portal-arrow,.fusion-replay{transition:none!important}.portal-link:hover,.portal-link:focus-visible{transform:none}}
+
+/* Keep the fusion interaction available on compact portrait phones too. */
+@media(max-width:800px) and (orientation:portrait){
+  .portal-inner{display:grid;grid-template-columns:minmax(0,1fr)}
+  .portal-lead{display:contents}
+  .portal-lead>div:first-child{grid-row:1}
+  .portal-menu{grid-row:2}
+  .portal-visual{display:block;grid-row:3;margin-top:14px}
+  .portal-fusion{height:clamp(105px,17svh,145px)}
+  .portal-fusion .fusion-orb,.portal-fusion .fusion-result{width:clamp(75px,22vw,100px)}
+  .fusion-replay{min-height:40px;font-size:11px}
+}
