@@ -413,6 +413,33 @@
   a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
   .contact a:focus-visible,.contact button:focus-visible,.contact input:focus-visible,.contact textarea:focus-visible{outline-color:var(--paper)}
   .site-nav:focus-within{transform:none!important;opacity:1!important;visibility:visible!important}
+
+  /* V9.2: less scrolling, quieter hierarchy, same interactive scenes. */
+  .nav-links{gap:clamp(18px,2.1vw,34px)}
+  .work,.method,.services,.thinking{padding-block:clamp(64px,7vw,108px)}
+  .manifesto{padding-block:clamp(70px,8vw,120px)}
+  .contact{padding-top:clamp(68px,7vw,110px)}
+  .section-header,.services-head{margin-bottom:clamp(26px,4vw,46px)}
+  .section-header h2,.method h2,.services h2,.contact h2{font-size:clamp(40px,5.3vw,80px);letter-spacing:-.068em}
+  .manifesto h2{font-size:clamp(40px,5.4vw,86px);margin-block:clamp(26px,4vw,46px)}
+  .thought{padding:24px 0}
+  .thought h3{margin:24px 0 12px}
+  .method-top p{margin-bottom:24px}
+  .method h2{margin:18px 0 24px}
+  @media(prefers-reduced-motion:no-preference){
+    .hero{height:160vh!important;height:160svh!important}
+    .idea-recognition{height:210vh!important;height:210svh!important}
+    .scroll-story{height:205vh!important;height:205svh!important}
+  }
+  @media(max-width:800px){
+    .nav-links{gap:0}
+    .section-header h2,.method h2,.services h2,.contact h2{font-size:clamp(38px,8.6vw,62px)}
+    .section-header{gap:14px}
+    .manifesto h2{font-size:clamp(37px,8vw,62px)}
+  }
+  @media(max-height:500px) and (orientation:landscape){
+    .section-header h2,.method h2,.services h2,.contact h2,.manifesto h2{font-size:clamp(32px,5.5vw,60px)}
+  }
 </style>
 </head>
 <body>
@@ -423,7 +450,7 @@
       <span class="brand-word">features.<small>studio</small></span>
     </a>
     <nav class="nav-links" id="navlinks" aria-label="Main navigation">
-      <a href="#philosophy">Why Features</a><a href="work.html">Work</a><a href="#method">Method</a><a href="#services">Services</a><a href="#studio">Studio</a><a class="nav-cta" href="#contact">Start a project ↗</a>
+      <a href="work.html">Work</a><a href="#services">Services</a><a href="#philosophy">About</a><a class="nav-cta" href="#contact">Start a project ↗</a>
     </nav>
     <button class="menu-button" id="menubtn" aria-label="Open navigation" aria-controls="navlinks" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h18M3 16h18"/></svg></button>
   </header>
@@ -435,7 +462,7 @@
             <div class="hero-kicker">Independent brand & creative studio</div>
             <h1 id="hero-heading"><span class="line">Every brand</span><span class="line">has <span class="blue">features.</span></span><span class="line">We make yours</span><span class="line">recognisable.</span></h1>
             <p class="hero-desc">Brand strategy, identity and creative expression for ambitious businesses.</p>
-            <div class="hero-actions"><a class="pill solid" href="#work">View selected work <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a class="pill outline" href="#contact">Start a project</a></div>
+            <div class="hero-actions"><a class="pill solid" href="#work">View work <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a class="pill outline" href="#contact">Start a project</a></div>
           </div>
           <div class="hero-art hero-fusion" role="img" aria-label="Three different coloured, initially blurred circles move together as you scroll and become one crisp, subtly shining circle — a recognisable identity.">
             <div class="fusion-field" id="fusion-field" aria-hidden="true">
@@ -458,45 +485,8 @@
     </section>
     <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Understand before create</span><b>✳</b><span>Make the difference visible</span><b>✳</b><span>Craft with intent</span><b>✳</b><span>Build recognition</span><b>✳</b><span>Understand before create</span><b>✳</b><span>Make the difference visible</span><b>✳</b><span>Craft with intent</span><b>✳</b><span>Build recognition</span><b>✳</b></div></div>
     <!-- Recognition experience: four chapters, entirely controlled by reversible scroll progress. -->
-    <section class="idea idea-recognition" id="philosophy" aria-labelledby="idea-title" data-stage="0">
-      <div class="idea-sticky">
-        <div class="wrap idea-grid">
-          <div class="idea-copy">
-            <div class="overline" style="color:#9ea9bc">The idea behind Features</div>
-            <h2 id="idea-title">Different is good.<br/><em>Recognisable</em><br/>is better.</h2>
-            <p class="intro">A face is recognised by the combination of its features. A brand works the same way. We uncover what makes yours distinctly its own, then give it a system people remember.</p>
-            <div class="recognition-copy" role="status" aria-live="polite" aria-atomic="true">
-              <div class="recognition-caption"><span class="recognition-number" id="recognition-number">01</span><span class="recognition-divider"> / </span><span id="recognition-name">SIMILARITY</span></div>
-              <h3 id="recognition-title">When everything looks alike, nothing stays.</h3>
-              <p id="recognition-description">At first, every mark blends into the same pattern.</p>
-            </div>
-            <div class="recognition-navigation" role="group" aria-label="Explore the four stages of recognition">
-              <button type="button" class="recognition-step is-active" data-recognition-step="0" aria-pressed="true" aria-label="Stage 1: Similarity"><span class="recognition-step-rail"></span><span>01</span></button>
-              <button type="button" class="recognition-step" data-recognition-step="1" aria-pressed="false" aria-label="Stage 2: Distinction"><span class="recognition-step-rail"></span><span>02</span></button>
-              <button type="button" class="recognition-step" data-recognition-step="2" aria-pressed="false" aria-label="Stage 3: System"><span class="recognition-step-rail"></span><span>03</span></button>
-              <button type="button" class="recognition-step" data-recognition-step="3" aria-pressed="false" aria-label="Stage 4: Recognition"><span class="recognition-step-rail"></span><span>04</span></button>
-            </div>
-          </div>
-          <div class="difference-board">
-            <div class="recognition-visual">
-              <div class="recognition-halo" aria-hidden="true"></div>
-              <div class="recognition-grid-wrap">
-                <svg class="recognition-connections" viewBox="0 0 700 700" aria-hidden="true" focusable="false">
-                  <path d="M350 350 L350 250 M350 350 L250 350 M350 350 L450 350 M350 350 L350 450" />
-                  <path class="recognition-secondary-lines" d="M350 250 L250 250 L250 350 M350 250 L450 250 L450 350 M250 350 L250 450 L350 450 M450 350 L450 450 L350 450" />
-                </svg>
-                <div class="dot-board" id="dotboard" aria-label="An interactive grid of 49 features. The centre is your defining feature; tap it to advance the story."></div>
-              </div>
-              <p class="recognition-visual-note"><span class="recognition-live-dot" aria-hidden="true"></span><span id="recognition-visual-label">49 familiar shapes. Nothing to remember.</span></p>
-              <p class="recognition-hint" id="recognition-hint">Scroll to reveal · Tap the centre circle</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="statement-strip"><div class="wrap"><span>Our belief</span><span>Difference needs <strong>clarity.</strong> &nbsp; Clarity needs <strong>form.</strong> &nbsp; Recognition needs <strong>consistency.</strong></span></div></div>
     <section class="work" id="work" aria-labelledby="work-title"><div class="wrap">
-      <div class="section-header reveal"><div><div class="section-index"><span class="index-number">01 /</span> Selected work</div><h2 id="work-title">Made to be<br/>recognised.</h2></div><p>Real design work from the Features Studio archive. Distinct identities and creative expressions with their own point of view.</p></div>
+      <div class="section-header reveal"><div><div class="section-index"><span class="index-number">01 /</span> Selected work</div><h2 id="work-title">Made to be<br/>recognised.</h2></div><p>Selected identities and creative work from our archive.</p></div>
       <div class="work-grid portfolio-preview">
 <article class="portfolio-card work-card reveal" data-category="identity">
       <a class="project-hit" href="https://www.behance.net/gallery/120995797/ARX-Branding-Identity" target="_blank" rel="noopener noreferrer" aria-label="View ARX Branding Identity on Behance">
@@ -547,15 +537,52 @@
     </div></section>
 
     <!-- Scroll story: a reversible, scroll-controlled visual narrative (not a logo). -->
+    <section class="idea idea-recognition" id="philosophy" aria-labelledby="idea-title" data-stage="0">
+      <div class="idea-sticky">
+        <div class="wrap idea-grid">
+          <div class="idea-copy">
+            <div class="overline" style="color:#9ea9bc">The idea behind Features</div>
+            <h2 id="idea-title">Different is good.<br/><em>Recognisable</em><br/>is better.</h2>
+            <p class="intro">Like a face, a brand is recognised by its features. We find yours and turn them into a system people remember.</p>
+            <div class="recognition-copy" role="status" aria-live="polite" aria-atomic="true">
+              <div class="recognition-caption"><span class="recognition-number" id="recognition-number">01</span><span class="recognition-divider"> / </span><span id="recognition-name">SIMILARITY</span></div>
+              <h3 id="recognition-title">When everything looks alike, nothing stays.</h3>
+              <p id="recognition-description">At first, every mark blends into the same pattern.</p>
+            </div>
+            <div class="recognition-navigation" role="group" aria-label="Explore the four stages of recognition">
+              <button type="button" class="recognition-step is-active" data-recognition-step="0" aria-pressed="true" aria-label="Stage 1: Similarity"><span class="recognition-step-rail"></span><span>01</span></button>
+              <button type="button" class="recognition-step" data-recognition-step="1" aria-pressed="false" aria-label="Stage 2: Distinction"><span class="recognition-step-rail"></span><span>02</span></button>
+              <button type="button" class="recognition-step" data-recognition-step="2" aria-pressed="false" aria-label="Stage 3: System"><span class="recognition-step-rail"></span><span>03</span></button>
+              <button type="button" class="recognition-step" data-recognition-step="3" aria-pressed="false" aria-label="Stage 4: Recognition"><span class="recognition-step-rail"></span><span>04</span></button>
+            </div>
+          </div>
+          <div class="difference-board">
+            <div class="recognition-visual">
+              <div class="recognition-halo" aria-hidden="true"></div>
+              <div class="recognition-grid-wrap">
+                <svg class="recognition-connections" viewBox="0 0 700 700" aria-hidden="true" focusable="false">
+                  <path d="M350 350 L350 250 M350 350 L250 350 M350 350 L450 350 M350 350 L350 450" />
+                  <path class="recognition-secondary-lines" d="M350 250 L250 250 L250 350 M350 250 L450 250 L450 350 M250 350 L250 450 L350 450 M450 350 L450 450 L350 450" />
+                </svg>
+                <div class="dot-board" id="dotboard" aria-label="An interactive grid of 49 features. The centre is your defining feature; tap it to advance the story."></div>
+              </div>
+              <p class="recognition-visual-note"><span class="recognition-live-dot" aria-hidden="true"></span><span id="recognition-visual-label">49 familiar shapes. Nothing to remember.</span></p>
+              <p class="recognition-hint" id="recognition-hint">Scroll to reveal · Tap the centre circle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="statement-strip"><div class="wrap"><span>Our belief</span><span>Difference needs <strong>clarity.</strong> &nbsp; Clarity needs <strong>form.</strong> &nbsp; Recognition needs <strong>consistency.</strong></span></div></div>
     <section class="scroll-story" id="reveal-story" aria-label="The Features perspective: Find, Shape, Recognise">
       <div class="story-sticky" id="story-sticky">
         <div class="story-container">
           <div class="story-topline"><div class="overline">The Features perspective</div><div class="story-step"><span id="story-current">01</span><span class="story-step-muted"> / 03</span><div class="story-progress-track"><div class="story-progress-fill" id="story-progress-fill"></div></div></div></div>
           <div class="story-layout">
             <div class="story-text" id="story-text">
-              <div class="story-panel is-current" data-step="0"><span class="story-label">01 / FIND</span><h2 id="story-title">It starts with what makes you <em>you.</em></h2><p>Every business has a point of view. We look closer to uncover the defining features worth recognising.</p></div>
-              <div class="story-panel" data-step="1" aria-hidden="true"><span class="story-label">02 / SHAPE</span><h2>Give your difference <em>a form.</em></h2><p>We turn those features into a coherent identity — one connected system that feels unmistakably yours.</p></div>
-              <div class="story-panel" data-step="2" aria-hidden="true"><span class="story-label">03 / RECOGNISE</span><h2>Make it impossible <em>to mistake.</em></h2><p>With consistent creative expression, distinctiveness becomes something people remember.</p></div>
+              <div class="story-panel is-current" data-step="0"><span class="story-label">01 / FIND</span><h2 id="story-title">It starts with what makes you <em>you.</em></h2><p>We find the defining features of your brand.</p></div>
+              <div class="story-panel" data-step="1" aria-hidden="true"><span class="story-label">02 / SHAPE</span><h2>Give your difference <em>a form.</em></h2><p>We shape them into one distinctive identity.</p></div>
+              <div class="story-panel" data-step="2" aria-hidden="true"><span class="story-label">03 / RECOGNISE</span><h2>Make it impossible <em>to mistake.</em></h2><p>We build recognition through consistent expression.</p></div>
             </div>
             <div class="story-geometry" role="img" aria-label="As you scroll: a feature is discovered among many ideas, developed into a cohesive identity system, then repeated consistently across brand, campaign, and digital designs.">
               <div class="story-aura" aria-hidden="true"></div>
@@ -628,11 +655,11 @@
       </div>
     </section>
 
-    <section class="method" id="method" aria-labelledby="method-title"><div class="wrap"><div class="method-top reveal"><div><div class="section-index"><span class="index-number">02 /</span> The Features Method</div><h2 id="method-title">We understand<br/>before we<br/>create.</h2></div><p>A recognisable brand doesn't happen by accident. We connect thinking, making and keeping your brand distinctive in one intentional process.</p></div>
+    <section class="method" id="method" aria-labelledby="method-title"><div class="wrap"><div class="method-top reveal"><div><div class="section-index"><span class="index-number">02 /</span> The Features Method</div><h2 id="method-title">We understand<br/>before we<br/>create.</h2></div><p>From discovery to expression, every decision builds recognition.</p></div>
       <div class="stages"><div class="stage reveal"><span class="num">01</span><h3>Find.</h3><p>Discovery, research, insights. Understand what makes you, you.</p></div><div class="stage reveal"><span class="num">02</span><h3>Define.</h3><p>Positioning, purpose and messaging built around a clear idea.</p></div><div class="stage reveal"><span class="num">03</span><h3>Design.</h3><p>A considered verbal and visual identity system.</p></div><div class="stage reveal"><span class="num">04</span><h3>Express.</h3><p>Campaigns, content and experiences that bring the brand to life.</p></div><div class="stage reveal"><span class="num">05</span><h3>Protect.</h3><p>Creative direction and care that keep the brand recognisable.</p></div></div>
       <div class="method-note reveal"><strong>Discover → Diagnose → Decide → Create → Refine → Launch → Apply</strong><span>Clarity you can feel, at every stage.</span></div>
     </div></section>
-    <section class="services" id="services" aria-labelledby="services-title"><div class="wrap"><div class="services-head reveal"><div><div class="section-index"><span class="index-number">03 /</span> What we do</div><h2 id="services-title">One brand.<br/>One connected<br/>system.</h2></div><p>From finding what defines you to making it visible, our work brings strategy and creative execution together.</p></div>
+    <section class="services" id="services" aria-labelledby="services-title"><div class="wrap"><div class="services-head reveal"><div><div class="section-index"><span class="index-number">03 /</span> What we do</div><h2 id="services-title">One brand.<br/>One connected<br/>system.</h2></div><p>Strategy, identity and creative expression. One connected system.</p></div>
       <div class="service-list">
         <div class="service reveal"><span class="s-num">01 /</span><h3>Feature Discovery</h3><p>Audit, research, diagnosis and a recommended direction to move forward with clarity.</p><span class="circle-arrow" aria-hidden="true">↗</span></div>
         <div class="service reveal"><span class="s-num">02 /</span><h3>Brand System</h3><p>Brand strategy, positioning, identity, messaging and usable guidelines.</p><span class="circle-arrow" aria-hidden="true">↗</span></div>
@@ -641,10 +668,10 @@
       </div>
     </div></section>
     <section class="manifesto" id="studio" aria-labelledby="manifesto-title"><div class="wrap reveal"><div class="overline">Our manifesto</div><h2 id="manifesto-title">We don't create difference for the sake of being different. <em>We reveal what deserves to be known.</em></h2><div class="manifesto-foot"><strong>Features Studio. Distinctly Yours.</strong><span>Smart. Curious. Crafted. Confident.</span></div></div></section>
-    <section class="thinking" id="insights" aria-labelledby="thinking-title"><div class="wrap"><div class="section-header reveal"><div><div class="section-index"><span class="index-number">04 /</span> How we think</div><h2 id="thinking-title">A clearer<br/>perspective.</h2></div><p>A few principles that shape the way we see brands, make decisions and create.</p></div><div class="thinking-grid"><div class="thought reveal"><span class="thought-num">01 — DISCOVERY</span><h3>Before we create,<br/>we find.</h3><p>Every brand has a truth worth uncovering. Better questions lead to more meaningful creative decisions.</p></div><div class="thought reveal"><span class="thought-num">02 — IDENTITY</span><h3>Difference needs<br/>a form.</h3><p>The strongest identities don't just look different. They make an authentic difference easy to see.</p></div><div class="thought reveal"><span class="thought-num">03 — EXPRESSION</span><h3>Consistency<br/>creates memory.</h3><p>A brand becomes recognisable through distinctive assets and meaningful repetition.</p></div></div></div></section>
+    <section class="thinking" id="insights" aria-labelledby="thinking-title"><div class="wrap"><div class="section-header reveal"><div><div class="section-index"><span class="index-number">04 /</span> How we think</div><h2 id="thinking-title">A clearer<br/>perspective.</h2></div><p>Three principles behind our work.</p></div><div class="thinking-grid"><div class="thought reveal"><span class="thought-num">01 — DISCOVERY</span><h3>Before we create,<br/>we find.</h3><p>Every brand has a truth worth uncovering. Better questions lead to more meaningful creative decisions.</p></div><div class="thought reveal"><span class="thought-num">02 — IDENTITY</span><h3>Difference needs<br/>a form.</h3><p>The strongest identities don't just look different. They make an authentic difference easy to see.</p></div><div class="thought reveal"><span class="thought-num">03 — EXPRESSION</span><h3>Consistency<br/>creates memory.</h3><p>A brand becomes recognisable through distinctive assets and meaningful repetition.</p></div></div></div></section>
     <section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap"><div class="contact-content"><div class="reveal"><div class="overline" style="color:#9ba9bd">Your next chapter</div><h2 id="contact-title">Let's make<br/>yours <span>recognisable.</span></h2><p>Tell us what you're building—and what you want your brand to become known for.</p></div>
       <form class="project-form reveal" id="projectform"><div class="overline" style="color:#b9c7dc">Start a conversation</div><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="How should we call you?" autocomplete="name" required maxlength="100"/><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required maxlength="200"/><label for="brand">Brand or company</label><input id="brand" name="brand" type="text" placeholder="What are you building?" maxlength="120"/><label for="ambition">What do you want to become known for?</label><textarea id="ambition" name="ambition" placeholder="Tell us about your ambition..." required maxlength="2000"></textarea><button type="submit" class="pill">Copy enquiry ↗</button><p class="form-note">Preview only: this copies your enquiry to your clipboard. It does not send a message.</p><p class="form-feedback" id="formfeedback" aria-live="polite"></p></form>
-    </div><footer class="footer"><a href="#top" aria-label="Back to top"><strong>features.</strong></a><span>Every brand has features. We make yours recognisable.</span><div class="footer-links"><a href="#top">Back to top ↑</a><a href="#services">Services</a><a href="#method">Method</a><a href="#insights">Insights</a></div><span>© <span id="year"></span> Features Studio</span></footer>
+    </div><footer class="footer"><a href="#top" aria-label="Back to top"><strong>features.</strong></a><span>Every brand has features. We make yours recognisable.</span><div class="footer-links"><a href="#top">Back to top ↑</a><a href="#services">Services</a><a href="#method">Method</a><a href="#studio">Studio</a><a href="#insights">Insights</a></div><span>© <span id="year"></span> Features Studio</span></footer>
     </div></section>
   </main>
   <script>
